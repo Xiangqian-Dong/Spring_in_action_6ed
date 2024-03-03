@@ -1,9 +1,11 @@
 package com.example.tacocloud;
-import java.util.List;
+
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+
+import java.util.List;
 
 @Data
 public class Taco {

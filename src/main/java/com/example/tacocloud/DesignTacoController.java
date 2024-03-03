@@ -1,13 +1,13 @@
 package com.example.tacocloud;
 
 import com.example.tacocloud.Ingredient.Type;
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -53,17 +53,6 @@ public class DesignTacoController {
     public String showDesignForm() {
         return "design";
     }
-
-/*
-  @PostMapping
-  public String processTaco(Taco taco,
-  			@ModelAttribute TacoOrder tacoOrder) {
-    tacoOrder.addTaco(taco);
-    log.info("Processing taco: {}", taco);
-
-    return "redirect:/orders/current";
-  }
- */
 
     @PostMapping
     public String processTaco(
