@@ -1,4 +1,5 @@
-package com.example.tacocloud;
+package com.example.tacocloud.web;
+import com.example.tacocloud.TacoOrder;
 import jakarta.validation.Valid;
 
 import org.springframework.stereotype.Controller;
@@ -24,7 +25,7 @@ public class OrderController {
 
   @PostMapping
   public String processOrder(@Valid TacoOrder order, Errors errors,
-		  SessionStatus sessionStatus) {
+                             SessionStatus sessionStatus) {
     if (errors.hasErrors()) {
       return "orderForm";
     }

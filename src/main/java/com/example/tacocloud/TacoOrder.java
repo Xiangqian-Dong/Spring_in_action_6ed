@@ -5,12 +5,20 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 import org.hibernate.validator.constraints.CreditCardNumber;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Date;
 
 @Data
+@Table
 public class TacoOrder {
+  @Id
+  private Long id;
+
+  private Date placeAt;
 
   @NotBlank(message="Delivery name is required")
   private String deliveryName;
