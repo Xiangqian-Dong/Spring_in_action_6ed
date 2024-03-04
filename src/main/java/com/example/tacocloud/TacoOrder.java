@@ -3,6 +3,7 @@ package com.example.tacocloud;
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 import org.hibernate.validator.constraints.CreditCardNumber;
 import org.springframework.data.annotation.Id;
@@ -15,10 +16,12 @@ import java.util.Date;
 @Data
 @Table
 public class TacoOrder {
+  private static final long serialVersionUID = 1L;
+
   @Id
   private Long id;
 
-  private Date placeAt;
+  private Date placedAt = new Date();
 
   @NotBlank(message="Delivery name is required")
   private String deliveryName;
@@ -30,6 +33,7 @@ public class TacoOrder {
   private String deliveryCity;
 
   @NotBlank(message="State is required")
+  @Size(message = "2 Character")
   private String deliveryState;
 
   @NotBlank(message="Zip code is required")
