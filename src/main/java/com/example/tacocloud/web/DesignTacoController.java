@@ -2,6 +2,7 @@ package com.example.tacocloud.web;
 
 import com.example.tacocloud.Ingredient;
 import com.example.tacocloud.Ingredient.Type;
+import com.example.tacocloud.TacoUDT;
 import com.example.tacocloud.data.IngredientRepository;
 import com.example.tacocloud.Taco;
 import com.example.tacocloud.TacoOrder;
@@ -64,7 +65,7 @@ public class DesignTacoController {
             return "design";
         }
 
-        tacoOrder.addTaco(taco);
+        tacoOrder.addTaco(new TacoUDT(taco.getName(), taco.getIngredients()));
         return "redirect:/orders/current";
     }
 

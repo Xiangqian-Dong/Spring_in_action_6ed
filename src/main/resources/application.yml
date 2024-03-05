@@ -5,8 +5,8 @@ spring:
     generate-unique-name: false
     name: tacocloud
   cassandra:
-    keyspace-name: taco_cloud
+    keyspace-name: tacocloud
     schema-action: recreate
     local-datacenter: datacenter1
-    username: tacocloud
-    password: dkfj23sfs329
+#    username: tacocloud
+#    password: dkfj23sfs329
