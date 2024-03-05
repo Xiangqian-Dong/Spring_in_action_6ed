@@ -1,6 +1,10 @@
 server:
   port: 9090
-spring:
-  datasource:
-    generate-unique-name: false
-    name: tacocloud
+#spring:
+#  data:
+#    mongodb:
+#      host: 127.0.0.1
+#      port: 27017
+##      username: tacocloud
+##      password: sfskfjwrfwf
+#      database: tacoclouddb
